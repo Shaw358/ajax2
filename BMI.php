@@ -35,7 +35,12 @@ function BMLcalc($gewicht,$lengte){
 
   switch($bmi){
 
-    case $bmi < 18.5:
+
+    case $bmi == -1 and $bmi < 0.1:
+    echo "Bmi kan niet bepaald worden.";
+    break;
+
+    case $bmi > 0.1 and $bmi < 18.5:
     echo "Bmi = " . round($bmi, 1) . " - u bent Ondergewicht.";
     break;
 
